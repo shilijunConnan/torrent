@@ -1,13 +1,15 @@
-<template> 
-<router-view></router-view>
+<template>
+testhall
 </template>
 
 <script>
 export default{
-    name:'Students',
+    name:'Hall',
     props:{
+
     },
-    components:{  
+    components:{
+
     },
     setup(props,ctx){
         return{
@@ -18,4 +20,5 @@ export default{
 </script>
 
 <style lang='scss' scoped>
+
 </style>

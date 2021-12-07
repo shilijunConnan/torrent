@@ -11,7 +11,8 @@ let routes =[
     redirect:'/students/home',
     children:[
       {path: '/students/home',name: 'Home',component: Home},
-      {path:'/students/login',name:'Login',component:Login}
+      {path:'/students/login',name:'Login',component:Login},
+      {path:'/students/hall',name:'Hall',component:()=>import('../views/students/Hall.vue')}
     ]
   }
   

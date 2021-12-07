@@ -18,7 +18,7 @@
         <el-col :span="1"></el-col>
 
     </el-row>
-    <router-link  to='/students/login' class="goto"><div>进入会场&ensp;&ensp;>></div></router-link>
+    <router-link  to='/students/hall' class="goto"><div>进入会场&ensp;&ensp;>></div></router-link>
     <el-row>&ensp;</el-row>
     <el-row class="about">
         <el-col :span="1"></el-col>
