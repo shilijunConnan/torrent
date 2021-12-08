@@ -17,3 +17,7 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+<!-- github
+$ git remote set-url origin git@github.com:shilijunConnan/torrent.git -->
+

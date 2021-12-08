@@ -30,7 +30,7 @@
                 <el-col :span="8"></el-col>
                 <el-col :span="1">密码：</el-col>
                 <el-col :span="7">
-                        <el-input v-model="userPassword"  placeholder="请输入密码，初始密码为身份证后六位"/>   
+                        <el-input v-model="userPassword"  placeholder="请输入密码，初始密码为身份证后六位" show-password/>   
                 </el-col>
                 <el-col :span="8"></el-col>
             </el-row>

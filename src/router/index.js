@@ -12,7 +12,8 @@ let routes =[
     children:[
       {path: '/students/home',name: 'Home',component: Home},
       {path:'/students/login',name:'Login',component:Login},
-      {path:'/students/hall',name:'Hall',component:()=>import('../views/students/Hall.vue')}
+      {path:'/students/hall',name:'Hall',component:()=>import('../views/students/Hall.vue')},
+      {path:'/students/education',name:'Education',component:()=>import('../views/students/Education.vue')}
     ]
   }
   

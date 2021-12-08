@@ -34,8 +34,9 @@
                 <template #dropdown>
                     <el-dropdown-menu>
                         <el-dropdown-item>个人中心</el-dropdown-item>
-                        <el-dropdown-item>账号管理</el-dropdown-item>
-                        <el-dropdown-item>消息设置</el-dropdown-item>
+                        <el-dropdown-item><router-link to='/students/education' class="goto"> 学籍管理</router-link></el-dropdown-item>
+                        <el-dropdown-item @click="password_msg = true">消息设置</el-dropdown-item>
+                        <el-dropdown-item @click="password_set = true">修改密码</el-dropdown-item>
                         <el-dropdown-item>退出登录</el-dropdown-item>
                     </el-dropdown-menu>
                 </template>
@@ -55,6 +56,40 @@
         <el-col :span="1">
         </el-col>
     </el-row>
+    <!-- 修改密码 -->
+    <el-dialog v-model="password_set" title="修改密码" width="30%" center>
+        <el-input placeholder="请输入新密码" show-password v-model="newpass"/><br><br>
+        <el-input placeholder="请确认新密码" show-password v-model="newpass"/>
+        <template #footer>
+        <span class="dialog-footer">
+            <el-button @click="password_set = false">取消</el-button>
+        
+            <el-button type="primary" @click="password_set = false">确定</el-button>
+        </span>
+        </template>
+    </el-dialog>
+    <!-- 消息设置 -->
+    <el-dialog v-model="password_msg" title="推送设置" width="40%" center>
+        <el-row class="row_items">
+            <el-col :span="2"></el-col>
+            <el-col :span="18"><h3>允许学校推送招聘信息</h3></el-col>
+            <el-col :span="2"><el-switch v-model="status" /></el-col>
+            <el-col :span="2"></el-col>
+        </el-row>
+        <el-row class="row_items">
+            <el-col :span="2"></el-col>
+            <el-col :span="18"><h3>允许网站智能推送招聘信息</h3></el-col>
+            <el-col :span="2"><el-switch v-model="status" /></el-col>
+            <el-col :span="2"></el-col>
+        </el-row>
+        <template #footer>
+        <span class="dialog-footer">
+            <el-button @click="password_msg = false">取消</el-button>
+        
+            <el-button type="primary" @click="password_msg = false">确定</el-button>
+        </span>
+        </template>
+    </el-dialog>
 </template>
 
 <script>
@@ -68,10 +103,13 @@ export default{
 
     },
     setup(props,ctx){
-        let status=ref(false)
+        let status=ref(true)
         let userName=ref('卡Q因')
+        let password_set=ref(false)
+        let password_msg=ref(false)
+        let newpass=ref()
         return{
-            status,userName
+            status,userName,password_set,password_msg,newpass
         }
     }
 }
@@ -97,5 +135,14 @@ export default{
                 cursor: pointer;
         }
     }
+    
+}
+.row_items{
+        align-items: center;
+    }
+.goto{
+text-align: center;
+color: #606266;
+text-decoration: none;
 }
 </style>
