@@ -1,6 +1,39 @@
 // color
 $global_yellow_color:#ffff00;
-
+$global_gray_color: #606266;
 // font
 $global_font:10px;
 $global_family:'Times New Roman';
+//img size
+.img_4_3{
+    width: 120px;
+    height: 160px;
+}
+//class
+.global_row_items{
+    align-items: center; 
+    margin-bottom: 30px;   
+}
+.globa_router_link{
+    text-align: center;
+    color: #606266;
+    text-decoration: none;
+}
+.globa_router_link_back{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+.globa_text_link{
+    &:hover{
+            cursor: pointer;
+    }
+    
+}
+.globa_text_font{
+    font-size: 1.4*$global_font;
+    
+}
+.global_right{
+    text-align: right;
+}

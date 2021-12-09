@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 
-import router from '../../router'
+import routerAdmin from '../../router/admin'
 import store from '../../store'
 
 import ElementPlus from 'element-plus'
@@ -10,6 +10,6 @@ import Admin from './Admin.vue'
 
 const app = createApp(Admin)
 app.use(ElementPlus)
-app.use(router)
+app.use(routerAdmin)
 app.use(store)
 app.mount('#app')

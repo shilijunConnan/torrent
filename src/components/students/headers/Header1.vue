@@ -33,7 +33,7 @@
                 </span>
                 <template #dropdown>
                     <el-dropdown-menu>
-                        <el-dropdown-item>个人中心</el-dropdown-item>
+                        <el-dropdown-item><router-link to='/students/resume' class="goto">个人中心</router-link></el-dropdown-item>
                         <el-dropdown-item><router-link to='/students/education' class="goto"> 学籍管理</router-link></el-dropdown-item>
                         <el-dropdown-item @click="password_msg = true">消息设置</el-dropdown-item>
                         <el-dropdown-item @click="password_set = true">修改密码</el-dropdown-item>

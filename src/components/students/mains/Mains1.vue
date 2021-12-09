@@ -18,7 +18,7 @@
         <el-col :span="1"></el-col>
 
     </el-row>
-    <router-link  to='/students/hall' class="goto"><div>进入会场&ensp;&ensp;>></div></router-link>
+    <router-link  to='/students/hall' class="globa_router_link"><h2>进入会场&ensp;&ensp;>></h2></router-link>
     <el-row>&ensp;</el-row>
     <el-row class="about">
         <el-col :span="1"></el-col>
@@ -73,13 +73,7 @@ img{
     width:800px;
     height:400px;
 }
-.goto{
-    font-size: 3*$global_font;
-    font-weight: bold;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
+ 
 .about{
     margin: 50px 0 100px 0;
     .about1{

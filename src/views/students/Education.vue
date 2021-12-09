@@ -69,22 +69,19 @@
                         <el-col :span="4"><el-input :disabled='edu1_status' placeholder="请联系学校修改"></el-input></el-col>
                         <el-col :span="17"></el-col>
                  </el-row>
-                 <br>
-                 <el-row class="row_items">
-                        <el-col :span="4"></el-col>
-                        <el-col :span="6"><el-button type="primary" plain>申请变更</el-button></el-col>
-                        <el-col :span="4"></el-col>
-                        <el-col :span="6"><el-button type="success" plain>提交审核</el-button></el-col>
-                        <el-col :span="4"></el-col>
-                 </el-row>
              </el-col>
-
-             <el-col :span="3"><img src='https://tse3-mm.cn.bing.net/th/id/OIP-C.VMgGW9LHGwME1RucKlGmhwHaKd?w=125&h=180&c=7&r=0&o=5&pid=1.7'>
+             <el-col :span="3"><img class='img_4_3' src='https://tse3-mm.cn.bing.net/th/id/OIP-C.VMgGW9LHGwME1RucKlGmhwHaKd?w=125&h=180&c=7&r=0&o=5&pid=1.7'>
              
-            <br><br><el-button :disabled='edu1_status'>上传</el-button>
+            <br><br><el-button :disabled='edu1_status' style='width:120px'>上传</el-button>
              </el-col>
              <el-col :span="1"></el-col>
-             
+        </el-row>
+        <el-row class="row_items">
+            <el-col :span="4"></el-col>
+            <el-col :span="6"><el-button type="primary" plain>申请变更</el-button></el-col>
+            <el-col :span="4"></el-col>
+            <el-col :span="6"><el-button type="success" plain>提交审核</el-button></el-col>
+            <el-col :span="4"></el-col>
         </el-row>
         <br><br>
         <!-- part2 -->
@@ -207,15 +204,9 @@ export default{
 }
 .row_items{
         align-items: center;
-        margin-bottom: 30px ;
-        
+        margin-bottom: 30px ;      
     }
-img{
-            // width:160px;
-            // height: 240px;
-    width:100%;
-    height: 100%;
-}   
+ 
 button{
     width: 100%;
 } 
