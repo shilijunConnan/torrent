@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import students_router from './students_router'
 import Students from '../views/students/Students.vue'
 import Index from '../views/students/Index.vue'
 import Login from '../views/students/Login.vue'
@@ -17,10 +16,10 @@ let routes =[
   {
     path:'/students/home',
     name:'Home',component:()=>import('../views/students/Home.vue'),
-    redirect:'/students/resume',
     children:[
-    
-    {path:'/students/resume',name:'Resume',component:()=>import('../views/students/Resume.vue')}
+    {path:'/students/resume',name:'Resume',component:()=>import('../views/students/Resume.vue')},
+    {path:'/students/post',name:'Post',component:()=>import('../views/students/Post.vue')},
+    {path:'/students/process',name:'Process',component:()=>import('../views/students/Process.vue')}
   ]
 
   },

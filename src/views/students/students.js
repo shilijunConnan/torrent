@@ -7,6 +7,7 @@ import 'element-plus/dist/index.css'
 
 import Students from './Students.vue'
 
+
 const app = createApp(Students)
 app.use(ElementPlus)
 app.use(router)

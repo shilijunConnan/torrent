@@ -1,5 +1,5 @@
 <template>
-    <el-container class="login">
+    <el-container class="resume">
       <el-main>
           <main-resume-person></main-resume-person>
           <main-resume-status></main-resume-status>

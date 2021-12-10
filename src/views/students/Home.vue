@@ -12,11 +12,11 @@
                             <el-icon><postcard /></el-icon>
                             <span>我的简历</span>
                     </el-menu-item>
-                    <el-menu-item index="2">
+                    <el-menu-item index="2" @click="goto('post')">
                             <el-icon><icon-menu /></el-icon>
                             <span>投递记录</span>
                     </el-menu-item>
-                    <el-menu-item index="3" @click="goto('login')">
+                    <el-menu-item index="3" @click="goto('process')">
                         <el-icon><document /></el-icon>
                         <span>面试进程</span>
                     </el-menu-item>
@@ -59,13 +59,13 @@ export default{
     },
     setup(props,ctx){
         const router = useRouter()
-        console.log(router)
-        let goto=ref((paths)=>{
+        // console.log(router)
+        let goto=(paths)=>{
            return router.push('/students/'+paths)
-        })
-        console.log('home')
+        }
+        // console.log('home')
         return{
-goto
+        goto
         }
     }
 }
@@ -84,11 +84,11 @@ goto
     }
     main{
         margin-top: 60px;
+        min-height : 500px;
     }
     footer{
         background-color: #000000;
         height: auto;
     }
 }
-
 </style>
