@@ -20,11 +20,11 @@
                         <el-icon><document /></el-icon>
                         <span>面试进程</span>
                     </el-menu-item>
-                    <el-menu-item index="4">
+                    <el-menu-item index="4"  @click="goto('favorite')">
                         <el-icon><star-filled /></el-icon>
                         <span>我的收藏</span>
                     </el-menu-item>
-                    <el-menu-item index="5">
+                    <el-menu-item index="5" @click="goto('maybe')"> 
                         <el-icon><magic-stick /></el-icon>
                         <span>猜你想看</span>
                     </el-menu-item>
@@ -39,6 +39,9 @@
       </el-main>
       <el-footer><bottom-1></bottom-1></el-footer>
     </el-container>
+   <el-backtop  style="text-align: center;bottom: 150px;left: 40px; color:green;width:50px;height:50px;border-radius:50%">
+      <el-icon size="50px"><top/></el-icon>
+  </el-backtop>
 </template>
 
 <script>
@@ -47,13 +50,13 @@ import { useRouter } from "vue-router"
 import Header1 from '@/components/students/headers/Header1.vue'
 import Bottom1 from '@/components/students/bottoms/Bottom1.vue'
 import Mains1 from '@/components/students/mains/Mains1.vue'
-import {Postcard,MagicStick,StarFilled ,Menu as IconMenu,Document} from '@element-plus/icons'
+import {Postcard,MagicStick,StarFilled ,Menu as IconMenu,Document,Top } from '@element-plus/icons'
 export default{
     name:'Home',
     props:{
     },
     components:{
-        Header1,Bottom1,Mains1
+        Header1,Bottom1,Mains1,Top
         ,Postcard,StarFilled,MagicStick,Document,IconMenu,
 
     },
@@ -91,4 +94,5 @@ export default{
         height: auto;
     }
 }
+
 </style>

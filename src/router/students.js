@@ -19,6 +19,8 @@ let routes =[
     children:[
     {path:'/students/resume',name:'Resume',component:()=>import('../views/students/Resume.vue')},
     {path:'/students/post',name:'Post',component:()=>import('../views/students/Post.vue')},
+    {path:'/students/favorite',name:'Favorite',component:()=>import('../views/students/Favorite.vue')},
+    {path:'/students/maybe',name:'Maybe',component:()=>import('../views/students/Maybe.vue')},
     {path:'/students/process',name:'Process',component:()=>import('../views/students/Process.vue')}
   ]
 
