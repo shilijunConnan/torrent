@@ -12,6 +12,9 @@ let routes =[
   {path: '/students/index',name: 'Index',component: Index},
   {path:'/students/login',name:'Login',component:Login},
   {path:'/students/hall',name:'Hall',component:()=>import('../views/students/Hall.vue')},
+  {path:'/students/job',name:'Job',component:()=>import('../views/students/Job.vue')},
+  {path:'/students/company',name:'Company',component:()=>import('../views/students/Company.vue')},
+  {path:'/students/oneResume',name:'OneResume',component:()=>import('../views/students/OneResume.vue')},
   {path:'/students/education',name:'Education',component:()=>import('../views/students/Education.vue')},
   {
     path:'/students/home',

@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 
 import routerAdmin from '../../router/admin'
-import store from '../../store'
+import store from '../../store/students'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'

@@ -1,10 +1,10 @@
 <template>
   <div class='search-input-item'>
     <el-input
-      v-model="input3"
+      v-model="keyword"
       placeholder="请输入搜索内容"
       class="input-with-select"
-      style="width: 80%"
+      style="width: 100%"
     >
       <template #prepend>
         <el-select v-model="select" placeholder="行业" style="width: 100px">
@@ -32,15 +32,16 @@ import {Search} from '@element-plus/icons'
 export default{
     name:'SearchInput',
     props:{
-
+      
     },
     components:{
 Search
     },
     setup(props,ctx){
-        let input3,select=ref()
+        let keyword=ref('')
+        let select=ref()
         return{
-input3,select
+          select,keyword
         }
     }
 }
