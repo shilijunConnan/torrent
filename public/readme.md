@@ -1,0 +1,3 @@
+1、admin中，
+ssc_status代表传入的账户类型student1、companies2、school3
+check_status代表的是一个账号的审核状态
