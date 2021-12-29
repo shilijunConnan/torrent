@@ -45,6 +45,7 @@
 
 <script>
 import {ref} from 'vue'
+
 export default{
     name:'EducationOne',
     props:{
@@ -54,6 +55,7 @@ export default{
 
     },
     setup(props,ctx){
+        
         let level1=ref([
             1,2,3,4
         ])

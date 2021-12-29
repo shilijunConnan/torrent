@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import {ref} from 'vue'
 import Header1 from '@/components/students/headers/Header1.vue'
 import Bottom1 from '@/components/students/bottoms/Bottom1.vue'
 import MainResumePerson from '@/components/students/mains/MainResumePerson.vue'
@@ -43,7 +42,6 @@ export default{
         
     },
     setup(props,ctx){
-        
         return{
         }
     }

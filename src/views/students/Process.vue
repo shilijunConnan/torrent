@@ -1,17 +1,16 @@
 <template>
-  <el-tabs >
-    <el-tab-pane label="待确认">
-        <main-interview-pre></main-interview-pre>
-    </el-tab-pane>
-    <el-tab-pane label="待签约">
-        <main-interview-ing></main-interview-ing>
-    </el-tab-pane>
-    <el-tab-pane label="已完成">
-        <main-interview-ed></main-interview-ed>
-    </el-tab-pane>
-  </el-tabs>
+  <el-menu
+    class="el-menu-demo"
+    mode="horizontal"
+    :default-active="this.$route.path"
+    router
+  >
+    <el-menu-item index="/students/home/process/pre">待确认</el-menu-item>
+    <el-menu-item index="/students/home/process/ing">待签约</el-menu-item>
+    <el-menu-item index="/students/home/process/ed">已完成</el-menu-item>
+  </el-menu>
+  <router-view></router-view>
 </template>
-
 <script>
 import {ref} from 'vue'
 import MainInterviewPre from '@/components/students/mains/MainInterviewPre.vue' 

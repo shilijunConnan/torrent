@@ -1,9 +1,3 @@
-// import { join } from 'path';
-// const path = require('path');
-// function resolve(dir) {
-//   return join(__dirname, dir);
-// }
-
 
 
 module.exports = {
@@ -33,28 +27,20 @@ module.exports = {
             title: 'torrentSchools'
         },
     },
+  
 
     devServer: {
       proxy: {
         '/user': {
             //要访问的跨域的api的域名
-            target: 'localhost:8080',
+            target: "http://localhost:9001",
             ws: true,
-            secure:false,
-            changOrigin: true,
-        },
-        // '/order': {
-        //     target: 'http://www.order.com',
-        //     ws: true,
-        //     secure:false,
-        //     changOrigin: true,
-        // },
-        // '/pay': {
-        //     target: 'http://www.pay.com',
-        //     ws: true,
-        //     secure:false,
-        //     changOrigin: true,
-        // },
+            changeOrigin: true,//是否允许开启代理
+            pathRewrite: {
+              // '^/api'是一个正则表达式，表示要匹配请求的url中，全部'http://localhost:8081/api' 转接为 http://localhost:8081/
+              '^/user': '',
+            }
+        }
       }
     }
   ,
@@ -67,7 +53,7 @@ module.exports = {
           }
         }
       }
-    };
+};
   
     
     

@@ -9,8 +9,13 @@ let routes = [
   },
   {
     path: '/admin/login',
-    name: 'Login',
+    name: 'AdminLogin',
     component: () => import('../views/admin/Login.vue')
+  },
+  {
+    path: '/admin/register',
+    name: 'AdminRegister',
+    component: () => import('../views/admin/Register.vue')
   },
   {
     path: '/admin/school/check',

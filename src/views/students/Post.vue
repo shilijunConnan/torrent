@@ -1,18 +1,16 @@
 <template>
-  <el-tabs >
-    <el-tab-pane label="已投递">
-        <main-post-delivered></main-post-delivered>
-    </el-tab-pane>
-    <el-tab-pane label="被查看">
-        <main-post-checked></main-post-checked>
-    </el-tab-pane>
-    <el-tab-pane label="被拒绝">
-        <main-post-refused></main-post-refused>
-    </el-tab-pane>
-    <el-tab-pane label="面试邀请">
-        <main-post-interview></main-post-interview>
-    </el-tab-pane>
-  </el-tabs>
+  <el-menu
+    class="el-menu-demo"
+    mode="horizontal"
+    :default-active="this.$route.path"
+    router
+  >
+    <el-menu-item index="/students/home/post/delivered">已投递</el-menu-item>
+    <el-menu-item index="/students/home/post/checked">被查看</el-menu-item>
+    <el-menu-item index="/students/home/post/refused">被拒绝</el-menu-item>
+    <el-menu-item index="/students/home/post/interview">面试邀请</el-menu-item>
+  </el-menu>
+  <router-view></router-view>
 </template>
 
 <script>

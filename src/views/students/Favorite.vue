@@ -1,12 +1,14 @@
 <template>
-  <el-tabs >
-    <el-tab-pane label="职位">
-        <main-favorite-position></main-favorite-position>
-    </el-tab-pane>
-    <el-tab-pane label="公司">
-        <main-favorite-company></main-favorite-company>
-    </el-tab-pane>
-  </el-tabs>
+  <el-menu
+    class="el-menu-demo"
+    mode="horizontal"
+    :default-active="this.$route.path"
+    router
+  >
+    <el-menu-item index="/students/home/favorite/position">职位</el-menu-item>
+    <el-menu-item index="/students/home/favorite/company">公司</el-menu-item>
+  </el-menu>
+  <router-view></router-view>
 </template>
 
 <script>
